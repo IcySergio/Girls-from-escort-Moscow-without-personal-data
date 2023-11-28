@@ -10,7 +10,7 @@ st.text("Let's display my dataset")
 #st.caption('Balloons. Hundreds of them...')
 #st.header('My header')
 #st.subheader('My sub')
-st.code(r'''with open(r"C:\Users\User\Desktop\задачи\out.csv", 'r', encoding='UTF-8') as f:
+st.code(r'''with open(r"out.csv", 'r', encoding='UTF-8') as f:
     data = list(csv.reader(f, delimiter=','))
     n = []
     for i in data[1::]:
@@ -45,7 +45,7 @@ st.code(r'''with open(r"C:\Users\User\Desktop\задачи\out.csv", 'r', encodi
     df = pd.DataFrame(n, columns =['ID', 'Age', 'Boobs', 'Height', 'Size', 'Metro', 'Month', 'Weight', 'Price_USD'])
     del df["ID"]
 df''')
-with open(r"C:\Users\User\Desktop\задачи\out.csv", 'r', encoding='UTF-8') as f:
+with open(r"out.csv", 'r', encoding='UTF-8') as f:
     data = list(csv.reader(f, delimiter=','))
     n = []
     for i in data[1::]:

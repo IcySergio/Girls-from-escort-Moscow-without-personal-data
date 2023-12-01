@@ -1,8 +1,8 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib
-import plotly.express as plt
+import matplotlib.pyplot as plt
+#import plotly.express as plt
 import csv
 st.title('Girls from escort (Moscow) without personal data')
 st.header('This dashboard will present the information about escort girls working in Moscow')

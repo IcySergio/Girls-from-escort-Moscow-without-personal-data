@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import matplotlib
 import plotly.express as plt
 import csv
 st.title('Girls from escort (Moscow) without personal data')

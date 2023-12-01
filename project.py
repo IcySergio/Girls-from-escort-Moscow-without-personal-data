@@ -94,3 +94,13 @@ st.text('Price_USD: price in USD for a woman with such an ancient profession(mb 
 st.markdown("<hr>", unsafe_allow_html=True)
 st.title('')
 st.title('Overview')
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Создаем график с Matplotlib
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_title('График с Matplotlib')
+
+# Отображаем график в Streamlit
+st.pyplot(fig)

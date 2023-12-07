@@ -1,8 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-#import plotly.express as plt
+import plotly.express as plt
 import csv
 st.title('Girls from escort (Moscow) without personal data')
 st.header('This dashboard will present the information about escort girls working in Moscow')
@@ -94,13 +93,18 @@ st.text('Price_USD: price in USD for a woman with such an ancient profession(mb 
 st.markdown("<hr>", unsafe_allow_html=True)
 st.title('')
 st.title('Overview')
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-
-# Создаем график с Matplotlib
-fig, ax = plt.subplots()
-ax.plot(x, y)
-ax.set_title('График с Matplotlib')
-
-# Отображаем график в Streamlit
-st.pyplot(fig)
+p = list(range(18, 52))
+m = {}
+for i in range(18, 52):
+    m[i] = 0
+for i in df.Age:
+    m[i] += 1
+n = []
+for i in m:
+    n.append(m[i])
+    p[p.index(i)] = str(p[p.index(i)])
+df1 = pd.DataFrame(dict(
+    age = p,
+    ammount = n))
+fig = plt.bar(df1, y='ammount', x='age', color='ammount')
+st.plotly_chart(fig)
